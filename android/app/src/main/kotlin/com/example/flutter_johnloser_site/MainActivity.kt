@@ -1,4 +1,4 @@
-package com.example.flutter_johnloser_site
+package com.example.flutter_johnloser_page
 
 import io.flutter.embedding.android.FlutterActivity
 
