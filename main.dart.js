@@ -51866,7 +51866,7 @@ A.SJ.prototype={
 $1(a){return!0},
 $S:54}
 A.xH.prototype={
-M(a){return new A.oY(B.Bt,"Flutter Demo",A.a3J(null,A.a91(B.I,B.Ba),!0),null)}}
+M(a){return new A.oY(B.Bt,"John Loser",A.a3J(null,A.a91(B.I,B.Ba),!0),null)}}
 A.pa.prototype={
 av(){return new A.t_(B.p)}}
 A.t_.prototype={
@@ -51874,7 +51874,7 @@ Mu(){this.aG(new A.Vv(this))},
 M(a){var s=null,r=A.aw(a).ax,q=r.k2
 r=q==null?r.c:q
 this.a.toString
-q=A.a3G("Flutter Demo Home Page",s)
+q=A.a3G("John Loser Home Page",s)
 return new A.qb(new A.n9(q,r,new A.E1(s,s,1/0,56),s),A.HY(A.a97(A.a([B.IB,A.a3G(""+this.d,A.aw(a).p3.e)],t.nA),B.AR),s,s),A.a1X(B.xC,!1,this.gMt(),"Increment"),s)}}
 A.Vv.prototype={
 $0(){++this.a.d},
