@@ -18,7 +18,7 @@ jobs:
       - run: flutter pub get
       - run: flutter test
       - run: flutter build web
-      - run: cat johnloser.lwishare.net > build/web/CNAME
+      - run: echo "johnloser.lwishare.net" > ./build/web/CNAME
 
     
       - uses: peaceiris/actions-gh-pages@v3
