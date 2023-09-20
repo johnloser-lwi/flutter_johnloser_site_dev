@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+import 'package:youtube_player_iframe_plus/youtube_player_iframe_plus.dart';
 
 class YoutubeEmbed extends StatefulWidget {
   //const YoutubeEmbed({super.key});
@@ -26,10 +26,12 @@ class _YoutubeEmbedState extends State<YoutubeEmbed> {
   @override
   Widget build(BuildContext context) {
     final controller = YoutubePlayerController(
+        initialVideoId: this.videoId,
         params: YoutubePlayerParams(
-            mute: false, showControls: true, showFullscreenButton: true));
-
-    controller.cueVideoById(videoId: this.videoId);
+            mute: false,
+            showControls: true,
+            showFullscreenButton: true,
+            autoPlay: false));
 
     return Padding(
       padding: EdgeInsets.all(10),
@@ -39,7 +41,7 @@ class _YoutubeEmbedState extends State<YoutubeEmbed> {
         children: [
           Expanded(
             flex: 2,
-            child: YoutubePlayer(
+            child: YoutubePlayerIFramePlus(
               controller: controller,
               aspectRatio: 16 / 9,
             ),
