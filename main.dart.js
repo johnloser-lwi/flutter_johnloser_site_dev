@@ -58755,7 +58755,7 @@ dg(a,b,c){var s=this.a
 if(c?J.fU(s,b):J.ky(s,b))this.ah()}}
 A.BQ.prototype={
 O(a){var s=null,r=A.a9j(s,s,B.fF,s)
-return new A.rS(new A.tV(new A.pN(B.JA,new A.J3(s,s,1/0,56),s),new A.hm(new A.bt(50,50,50,50),A.adI(new A.Bo(new A.ZV(new A.Wd(),2,!0,!0,!0,s),s,B.b8,!1,s,s,B.uO,!0,s,2,B.aV,B.DO,s,B.aG,B.aa,s),s),s),s),"Weiqin Yang Sound",r,s)}}
+return new A.rS(new A.tV(new A.pN(B.JA,new A.J3(s,s,1/0,56),s),new A.hm(new A.bt(50,50,50,50),A.adI(new A.Bo(new A.ZV(new A.Wd(),3,!0,!0,!0,s),s,B.b8,!1,s,s,B.uO,!0,s,3,B.aV,B.DO,s,B.aG,B.aa,s),s),s),s),"Weiqin Yang Sound",r,s)}}
 A.Wd.prototype={
 $2(a,b){var s=$.asW[b]
 return new A.mf(s[0],s[1],s[2],null)},
