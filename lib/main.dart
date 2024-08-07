@@ -29,73 +29,82 @@ void main() {
   runApp(const MyApp());
 }
 
+var app = ListView(
+  scrollDirection: Axis.horizontal,
+  shrinkWrap: true,
+  children: [
+    SizedBox(
+      width: 1200,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+              child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(140, 20, 140, 0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                          child: Text(
+                        "About",
+                        style: TextStyle(fontSize: 28),
+                      )),
+                      Expanded(
+                          child: Text(
+                        "My name is Weiqin Yang, a sound designer and technical sound designer. I'm passionate about creating immersive audio experiences for games, films, and animations. Here are some of my works.",
+                        style: TextStyle(fontSize: 14),
+                      )),
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                  flex: 1,
+                  child: Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 0))),
+              Expanded(
+                flex: 10,
+                child: ListView.builder(
+                  itemBuilder: (e, i) => YoutubeEmbed(
+                      videoId: videoIds[i][0],
+                      title: videoIds[i][1],
+                      description: videoIds[i][2]),
+                  itemCount: videoIds.length,
+                  padding: EdgeInsets.fromLTRB(120, 20, 120, 100),
+                ),
+              )
+            ],
+          ))
+        ],
+      ),
+    )
+  ],
+);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Weiqin Yang Sound',
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Weiqin Yang'),
-          backgroundColor: Colors.grey,
+        title: 'Weiqin Yang Sound',
+        theme: ThemeData(
+          primarySwatch: Colors.grey,
         ),
-        body: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 1200,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      flex: 2,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(140, 20, 140, 0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                                child: Text(
-                              "About",
-                              style: TextStyle(fontSize: 28),
-                            )),
-                            Expanded(
-                                child: Text(
-                              "My name is Weiqin Yang, a sound designer and composer. I'm passionate about creating immersive audio experiences for games, films, and animations. Here are some of my works.",
-                              style: TextStyle(fontSize: 14),
-                            )),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                        flex: 1,
-                        child:
-                            Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 0))),
-                    Expanded(
-                        flex: 10,
-                        child: ListView.builder(
-                          itemBuilder: (e, i) => YoutubeEmbed(
-                              videoId: videoIds[i][0],
-                              title: videoIds[i][1],
-                              description: videoIds[i][2]),
-                          itemCount: videoIds.length,
-                          shrinkWrap: true,
-                          padding: EdgeInsets.fromLTRB(120, 0, 120, 0),
-                        ))
-                  ],
-                ),
-              ),
-            ]),
-      ),
-    );
+        home: Scaffold(
+            appBar: AppBar(
+              title: const Text('Weiqin Yang'),
+              backgroundColor: Colors.grey,
+            ),
+            body: Center(
+              child: app,
+            )));
   }
 }
