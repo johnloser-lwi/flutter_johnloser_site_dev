@@ -11,12 +11,12 @@ var videoIds = [
   [
     "u1BDkNsWsZs",
     "Mortal Kombat 1 Omni Man Trailer Sound Redesign",
-    "A sound redesign project for the trailer of Mortal Kombat 1 Omni Man gameplay. Recorded and designed the punches and gore sounds from scratch."
+    "A sound redesign project for the trailer of MK 1 Omni Man gameplay. Recorded and designed the punches and gore sounds from scratch."
   ],
   [
     "99pnF7K8QUM",
-    "Exploring the Potentials of Wwise Dynamic Dialogue System",
-    "An experimental project exploring the potentials of Wwise Dynamic Dialogue System's special use case. In this project, I'm using it to trigger footsteps and impacts base on multiple parameters."
+    "Wwise Dialogue Event Experiment",
+    "An experimental project exploring the potentials of Wwise Dialogue Event. In this project, I'm using it to trigger footsteps and impacts base on multiple parameters."
   ],
 ];
 
@@ -38,18 +38,14 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Weiqin Yang'),
         ),
-        body: Padding(
-          padding: EdgeInsets.all(50),
-          child: Scrollbar(
-            child: ListView.builder(
-              itemBuilder: (e, i) => YoutubeEmbed(
-                  videoId: videoIds[i][0],
-                  title: videoIds[i][1],
-                  description: videoIds[i][2]),
-              itemCount: 3,
-              shrinkWrap: true,
-            ),
-          ),
+        body: ListView.builder(
+          itemBuilder: (e, i) => YoutubeEmbed(
+              videoId: videoIds[i][0],
+              title: videoIds[i][1],
+              description: videoIds[i][2]),
+          itemCount: 3,
+          shrinkWrap: true,
+          padding: EdgeInsets.fromLTRB(120, 0, 120, 0),
         ),
       ),
     );

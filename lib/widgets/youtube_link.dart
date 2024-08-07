@@ -34,20 +34,21 @@ class _YoutubeEmbedState extends State<YoutubeEmbed> {
             autoPlay: false));
 
     return Padding(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
         children: [
           Expanded(
-            flex: 2,
+            flex: 3,
             child: YoutubePlayerIFramePlus(
               controller: controller,
               aspectRatio: 16 / 9,
             ),
           ),
           Expanded(
-            flex: 3,
+            flex: 2,
             child: Padding(
               padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
               child: Column(
@@ -56,11 +57,11 @@ class _YoutubeEmbedState extends State<YoutubeEmbed> {
                 children: [
                   Text(
                     title,
-                    style: TextStyle(fontSize: 32),
+                    style: TextStyle(fontSize: 28),
                   ),
                   Text(
                     description,
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 16),
                   ),
                 ],
               ),
