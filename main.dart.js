@@ -58741,7 +58741,7 @@ dh(a,b,c){var s=this.a
 if(c?J.fU(s,b):J.ky(s,b))this.ah()}}
 A.BP.prototype={
 O(a){var s=null,r=A.a9j(s,s,B.fF,s)
-return new A.rS(new A.tV(new A.pN(B.JA,new A.J1(s,s,1/0,56),s),new A.Bo(new A.ZV(new A.Wc(),3,!0,!0,!0,s),new A.bt(120,0,120,0),B.bD,!1,s,s,B.uO,!0,s,3,B.aV,B.DO,s,B.aG,B.aa,s),s),"Weiqin Yang Sound",r,s)}}
+return new A.rS(new A.tV(new A.pN(B.JA,new A.J1(s,s,1/0,56),s),new A.Bo(new A.ZV(new A.Wc(),4,!0,!0,!0,s),new A.bt(120,0,120,0),B.bD,!1,s,s,B.uO,!0,s,4,B.aV,B.DO,s,B.aG,B.aa,s),s),"Weiqin Yang Sound",r,s)}}
 A.Wc.prototype={
 $2(a,b){var s=$.asV[b]
 return new A.mf(s[0],s[1],s[2],null)},
@@ -64210,7 +64210,7 @@ $.a9d=null
 $.ab=null
 $.a8O=-9007199254740992
 $.asV=function(){var s=t.s
-return A.b([A.b(["00_7hoid98c","Shift Trailer Sound Redesign","A challenging project at Vancouver Film School completed under 72 hours with limited resources provided."],s),A.b(["u1BDkNsWsZs","Mortal Kombat 1 Omni Man Trailer Sound Redesign","A sound redesign project for the trailer of MK 1 Omni Man gameplay. Recorded and designed the punches and gore sounds from scratch."],s),A.b(["99pnF7K8QUM","Wwise Dialogue Event Experiment","An experimental project exploring the potentials of Wwise Dialogue Event. In this project, I'm using it to trigger footsteps and impacts base on multiple parameters."],s)],A.ad("y<B<q>>"))}()
+return A.b([A.b(["00_7hoid98c","Shift Trailer Sound Redesign","A challenging project at Vancouver Film School completed under 72 hours with limited resources provided."],s),A.b(["u1BDkNsWsZs","Mortal Kombat 1 Omni Man Trailer Sound Redesign","A sound redesign project for the trailer of MK 1 Omni Man gameplay. Recorded and designed the punches and gore sounds from scratch."],s),A.b(["kodSCdG7j2U","SoundMorph Competition","A sound design competition hosted by SoundMorph. The goal is to create a sound design for the provided video clip with provided samples only."],s),A.b(["99pnF7K8QUM","Wwise Dialogue Event Experiment","An experimental project exploring the potentials of Wwise Dialogue Event. In this project, I'm using it to trigger footsteps and impacts base on multiple parameters."],s)],A.ad("y<B<q>>"))}()
 $.alz=function(){var s=t.n
 return A.b([A.b([0.001200833568784504,0.002389694492170889,0.0002795742885861124],s),A.b([0.0005891086651375999,0.0029785502573438758,0.0003270666104008398],s),A.b([0.00010146692491640572,0.0005364214359186694,0.0032979401770712076],s)],t.gg)}()
 $.alx=function(){var s=t.n
