@@ -41,14 +41,14 @@ class _YoutubeEmbedState extends State<YoutubeEmbed> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Expanded(
-            flex: 3,
+            flex: 2,
             child: YoutubePlayerIFramePlus(
               controller: controller,
               aspectRatio: 16 / 9,
             ),
           ),
           Expanded(
-            flex: 2,
+            flex: 3,
             child: Padding(
               padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
               child: Column(
@@ -57,7 +57,7 @@ class _YoutubeEmbedState extends State<YoutubeEmbed> {
                 children: [
                   Text(
                     title,
-                    style: TextStyle(fontSize: 28),
+                    style: TextStyle(fontSize: 24),
                   ),
                   Text(
                     description,

@@ -37,21 +37,64 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Weiqin Yang Sound',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Weiqin Yang'),
+          backgroundColor: Colors.grey,
         ),
-        body: ListView.builder(
-          itemBuilder: (e, i) => YoutubeEmbed(
-              videoId: videoIds[i][0],
-              title: videoIds[i][1],
-              description: videoIds[i][2]),
-          itemCount: videoIds.length,
-          shrinkWrap: true,
-          padding: EdgeInsets.fromLTRB(120, 0, 120, 0),
-        ),
+        body: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 1200,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(140, 20, 140, 0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                                child: Text(
+                              "About",
+                              style: TextStyle(fontSize: 28),
+                            )),
+                            Expanded(
+                                child: Text(
+                              "My name is Weiqin Yang, a sound designer and composer. I'm passionate about creating immersive audio experiences for games, films, and animations. Here are some of my works.",
+                              style: TextStyle(fontSize: 14),
+                            )),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                        flex: 1,
+                        child:
+                            Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 0))),
+                    Expanded(
+                        flex: 10,
+                        child: ListView.builder(
+                          itemBuilder: (e, i) => YoutubeEmbed(
+                              videoId: videoIds[i][0],
+                              title: videoIds[i][1],
+                              description: videoIds[i][2]),
+                          itemCount: videoIds.length,
+                          shrinkWrap: true,
+                          padding: EdgeInsets.fromLTRB(120, 0, 120, 0),
+                        ))
+                  ],
+                ),
+              ),
+            ]),
       ),
     );
   }
